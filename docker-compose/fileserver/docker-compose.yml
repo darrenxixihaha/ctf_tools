@@ -1,0 +1,14 @@
+version: '3'
+services:
+  fileserver:
+    restart: always
+    image: python:2.7.18
+    container_name: fileserver
+    volumes:
+      - ./data:/data
+      - ./droopy.py:/droopy.py
+    environment:
+      - "TZ=Asia/Shanghai"
+    command: python droopy.py --dl -d /data
+    ports:
+      - 8000:8000
