@@ -1,0 +1,12 @@
+version: '3'
+services:
+  xssor:
+    restart: always
+    image: virink/xssor2
+    container_name: xssor
+    volumes:
+      - ./run.sh:/app/xssor/run.sh
+    environment:
+      - "DOMAIN=127.0.0.1:5000"
+    ports:
+      - 5000:5000
