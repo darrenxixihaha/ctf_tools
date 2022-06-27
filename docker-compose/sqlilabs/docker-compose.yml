@@ -1,0 +1,8 @@
+version: '3'
+services:
+  sqlilabs:
+    restart: always
+    image: c0ny1/sqli-labs
+    container_name: sqlilabs
+    ports:
+      - 80:80
